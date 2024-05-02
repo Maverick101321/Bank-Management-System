@@ -19,26 +19,50 @@
         }
         .login-form {
             background-color: #fff;
-            padding: 26px; /* Increase padding by 30% */
-            border-radius: 19.5px; /* Increase border-radius by 30% */
+            padding: 30px; /* Increase padding */
+            border-radius: 20px; /* Increase border-radius */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            max-width: 520px; /* Increase max-width by 30% */
+            max-width: 520px; /* Increase max-width */
             width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: left; /* Align login form content to the left */
+            align-items: flex-start; /* Align items to the left */
         }
         .logo img {
-            max-width: 130px; /* Increase logo size by 30% */
+            max-width: 150px; /* Increase logo size */
+            margin-bottom: 20px; /* Add margin between logo and text */
+        }
+        .login-form label {
+            font-size: 18px; /* Increase font size of labels */
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 15px; /* Increase padding */
+            margin-bottom: 20px; /* Increase margin */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px 30px; /* Increase padding */
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px; /* Increase font size */
+        }
+        .login-form button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <form class="login-form" id="loginForm">
-            <h1>Welcome to</h1>
-            <div class="logo">
+            <h1 style="margin-left: 10px;">Welcome to</h1> <!-- Adjust margin for welcome text -->
+            <div class="logo" style="margin-left: 10px;"> <!-- Adjust margin for logo -->
                 <img src="bank_logo.png" alt="Bank Logo">
             </div>
             <label for="username">Username:</label>
