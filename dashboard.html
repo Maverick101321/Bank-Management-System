@@ -15,12 +15,12 @@
             padding: 0;
         }
         .header {
-            background-color: #fff; /* Change background color to white */
+            background-color: #fff;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            color: #333; /* Change text color to black */
+            color: #333;
         }
         .header .logo {
             margin-left: 20px;
@@ -29,26 +29,38 @@
             margin-right: 20px;
         }
         .container {
-            overflow-y: auto; /* Add vertical scrolling */
-            height: calc(100vh - 60px); /* Adjust height for header */
-            padding-top: 10px; /* Add padding to separate header from content */
+            overflow-y: auto; /* Add vertical scroll */
+            white-space: nowrap; /* Prevent line break for cards */
+            padding: 10px;
         }
         .dashboard {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+            gap: 20px; /* Add spacing between cards */
         }
         .card {
             background-color: #fff;
             border-radius: 10px;
             padding: 20px;
-            margin: 10px 0;
             width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease; /* Add transition for animation */
+            transition: transform 0.3s ease;
+            text-align: left; /* Align text to the left */
         }
         .card:hover {
-            transform: translateY(-5px); /* Move the card up on hover */
+            transform: translateY(-5px);
+        }
+        .logout button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .logout button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -58,31 +70,52 @@
             <img src="bank_logo.png" alt="Bank Logo">
         </div>
         <div class="logout">
-            <button onclick="logout()">Logout</button>
+            <button onclick="window.location.href='index.html'">Logout</button> <!-- Redirect to login page when clicked -->
         </div>
     </div>
     <div class="container">
         <div class="dashboard">
             <div class="card">
                 <h2>Customers</h2>
+                <p>Customer Name: John Doe</p>
+                <p>Account Type: Savings</p>
+                <p>Balance: $10000</p>
             </div>
             <div class="card">
                 <h2>Accounts</h2>
+                <p>Account Number: 123456789</p>
+                <p>Account Type: Savings</p>
+                <p>Balance: $10000</p>
             </div>
             <div class="card">
                 <h2>Branches</h2>
+                <p>Branch Name: Main Street</p>
+                <p>Location: New York</p>
+                <p>Manager: John Doe</p>
             </div>
             <div class="card">
                 <h2>Transactions</h2>
+                <p>Date: 2024-04-26</p>
+                <p>Amount: $100</p>
+                <p>Type: Deposit</p>
             </div>
             <div class="card">
                 <h2>Loans</h2>
+                <p>Loan Type: Home Loan</p>
+                <p>Amount: $1750000</p>
+                <p>Interest Rate: 5%</p>
             </div>
             <div class="card">
                 <h2>Credit Cards</h2>
+                <p>Card Number: 1234-5678-9012-3456</p>
+                <p>Expiry Date: 04/26</p>
+                <p>Limit: $5000</p>
             </div>
             <div class="card">
                 <h2>Investments</h2>
+                <p>Investment Type: Stocks</p>
+                <p>Total Amount: $200000</p>
+                <p>Avg. Return Rate: 8%</p>
             </div>
         </div>
     </div>
